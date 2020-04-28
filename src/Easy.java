@@ -1,5 +1,5 @@
 public class Easy {
-    public static void main(String[] args) {
+    public static void easy () {
         float a = 12;
         float b = 5;
         System.out.println("Сумма равна " + Calculator.summAB(a,b));

@@ -14,11 +14,8 @@ public class Calculator {
         return a / b;
     }
 
-    public String scannerZnak(String znak){
-        Scanner s2 = new Scanner(System.in);
-        znak = s2.nextLine();
-        return znak;
+    public static String scannerZnak(Scanner sc){
+        System.out.println("Введите знак +, -, / или *");
+        return sc.nextLine();
     }
 }
-
-

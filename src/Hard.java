@@ -2,23 +2,28 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Hard {
-    public static void main(String[] args) {
-        Scanner s1 = new Scanner(System.in);
-        System.out.println("Введите значения a и b через пробелы: ");
-        while (s1.hasNext()) {
+    private static Scanner scanner;
+
+    static {
+        scanner = new Scanner(System.in);
+    }
+
+    public static void hard () {
+        System.out.println("Введите значения a и b через пробел: "+"\n");
+        while (scanner.hasNext()) {
             try {
-                result(s1.nextFloat(), s1.nextFloat());
+                result(scanner.nextFloat(), scanner.nextFloat());
                 break;
             } catch (NoSuchElementException exp) {
-                System.out.println("Ошибка ввода! Попробуйте еще раз:");
-                s1.nextLine();
+                System.err.println("Ошибка ввода! Попробуйте еще раз:"+"\n");
+                scanner.nextLine();
             }
         }
     }
+
     public static void result(final float a, final float b) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите знак +, -, / или *");
-        String cm = sc.nextLine();
+        scanner.nextLine();
+        String cm = Calculator.scannerZnak(scanner);
         switch (cm) {
             case "+":
                 System.out.println("Ответ: " + Calculator.summAB(a, b));
@@ -32,6 +37,6 @@ public class Hard {
             case "*":
                 System.out.println("Ответ: " + Calculator.umnozhAB(a, b));
                 break;
-            }
         }
     }
+}

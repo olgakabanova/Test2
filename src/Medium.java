@@ -2,16 +2,16 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Medium {
-    public static void main(String[] args) {
+    public static void medium () {
         Scanner input = new Scanner(System.in);
-        System.out.printf("Введите значения a и b через пробел");
+        System.out.printf("Введите значения a и b через пробел"+"\n");
         while (input.hasNext()) {
             try {
                 result(input.nextFloat(), input.nextFloat());
                 break;
             }
             catch (NoSuchElementException exp) {
-                System.out.println("Ошибка ввода! Попробуйте еще раз:");
+                System.out.println("Ошибка ввода! Попробуйте еще раз:"+"\n");
                 input.nextLine();
             }
         }
