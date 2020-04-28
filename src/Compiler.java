@@ -12,9 +12,9 @@ public class Compiler {
         } else if (i==3){
             Hard.hard();
         } else if (i<0){
-            System.out.println("Этого нет в выборе. Начните программу заново.");
+            System.out.println("Этого нет в выборе. Начните программу заново. ");
         } else if (i>4){
-            System.out.println("Этого нет в выборе. Начните программу заново.");
+            System.out.println("Этого нет в выборе. Начните программу заново. ");
         }
     }
 }
